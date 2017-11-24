@@ -1,0 +1,76 @@
+ul.hr
+{
+    background-color: rgb(24, 118, 172);
+    padding: 10px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+ul.hr > li {
+    display: inline;
+    margin-left: 10px;
+    list-style-type: none;
+}
+
+ul.hr > li > a
+{
+    font-family:Arial;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+div.art
+{
+    position:relative;
+    left: 5%;
+}
+
+div.art > ul > li 
+{
+    font-family:Arial;
+    font-size:16px;
+    color:rgb(59, 59, 59);
+    font-weight:600;
+
+    list-style-type:circle;
+}
+
+div.art > ul > li > a 
+{
+    font-family: Arial;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}
+
+p.home 
+{
+    font-family: Arial;
+    font-size: 16px;
+    color: rgb(59, 59, 59);
+    font-weight: 600;
+}
+
+div.auth
+{
+    height: 50px;
+    position:relative;
+    left:25%;
+    top:200px;
+}
+
+a.auth {
+    font-family: Arial;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}
+
+input.usr {
+    border: 0.5px solid;
+}
+
+    input.usr:focus {
+        border: 0.5px solid rgb(0, 147, 3);
+    }
