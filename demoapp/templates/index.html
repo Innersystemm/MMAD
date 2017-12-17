@@ -13,21 +13,12 @@
                 <a href="{% url 'index' %}">Home</a>
             </li>
             <li>
-                <a href="{% url 'articles' %}">Articles</a>
-            </li>
-            <li>
-                <a id="authMenu" href="{% url 'auth' %}">Auth</a>
+                <a href="{% url 'auth' %}">Auth</a>
             </li>
         </ul>
     </div>
-    <div class="art">
         {% block content %}
-            <p class="home">
-                {{text}}{{date}}
-           </p>
         {% endblock %}
-    </div>
-    <p id="counter"></p>
 
 </body>
 </html>

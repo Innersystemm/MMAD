@@ -4,6 +4,7 @@ ul.hr
     padding: 10px;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
+    margin: 0;
 }
 
 ul.hr > li {
@@ -20,57 +21,83 @@ ul.hr > li > a
     text-decoration: none;
 }
 
-div.art
+
+
+div.auth, div.auth-head
 {
-    position:relative;
-    left: 5%;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    display: flex;
 }
 
-div.art > ul > li 
+div.auth-head
 {
-    font-family:Arial;
-    font-size:16px;
-    color:rgb(59, 59, 59);
-    font-weight:600;
-
-    list-style-type:circle;
+	font-family: arial;
+	margin: 5px;
+	font-size: 18px;
 }
 
-div.art > ul > li > a 
+input.signs
 {
-    font-family: Arial;
-    font-size: 18px;
-    color: rgb(0, 0, 0);
-    font-weight: 600;
-}
-
-p.home 
-{
-    font-family: Arial;
+	border: none;
+    border-left: solid;
+    border-left-width: 5px;
+    border-color: rgb(24, 118, 172);
+    height: 20px;
     font-size: 16px;
-    color: rgb(59, 59, 59);
-    font-weight: 600;
+    background: #f3f3f3;
+    padding: 5px;
 }
 
-div.auth
+input.signs:focus 
 {
-    height: 50px;
-    position:relative;
-    left:25%;
-    top:200px;
+    border-color: #09fba6;
+    outline: none;
 }
 
-a.auth {
-    font-family: Arial;
+input.signs:selection
+{
+	border:none;
+	font-size: 25px;
+} 
+
+input.submit-btn
+{
+	margin: 10px;
+    background: rgb(24, 118, 172);
+    color: white;
     font-size: 16px;
-    color: rgb(0, 0, 0);
-    font-weight: 600;
+    border: thin;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: alias;
 }
 
-input.usr {
-    border: 0.5px solid;
+strong.auth-status
+{
+	margin-top: 50px;
+	border: none;
+    border-left: solid;
+    border-left-width: 5px;
+    border-color: #7d7d7d;
+    height: 20px;
+    font-size: 16px;
+    font-family: 'Arial';
+    background: #f3f3f3;
+    padding: 5px;
 }
 
-    input.usr:focus {
-        border: 0.5px solid rgb(0, 147, 3);
-    }
+label.auth-example
+{
+	font-style: italic;
+	font-size: 14px;
+	color: #888585;
+}
+
+label.auth-head
+{
+
+	font-size: 20px;
+}
+

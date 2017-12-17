@@ -1,25 +1,29 @@
-﻿{% extends 'index.html' %}
+{% extends 'index.html' %}
 
 {% block content %}
 <div>
-    <form method="post">
-
-        <div class="auth">
-        <a class="auth">Login</a>
-        <p>
-             <input class="usr" type="text" id="login" />
-        </p>
-        
-    </div>
-
-        <div class="auth">
-        <a class="auth">Password</a>
-        <p>
-            <input class="usr" type="password" id="password" />   
-        </p>
-            
+    <form action="" method="post">
+        {% csrf_token %}
+        <div>
+            <div>
+                <div  class="auth-head">
+                    <label class="auth-head">Введите признаки через пробел:</label>
+                </div>
+                <div  class="auth-head">
+                    {{ form.signs }}
+                </div> 
+                <div   class="auth-head">
+                    <label class="auth-example">Например: 90 56 45 14</label>
+                </div>
+            </div>
+            <div  class="auth">
+                <input class="submit-btn" type="submit" value="Submit">
+            </div>
         </div>
-    </form>
+    </form>  
+    <div class="auth">
+        <strong class="auth-status">{{status}}</strong>
+    </div>
     
 </div>
 {% endblock %}
