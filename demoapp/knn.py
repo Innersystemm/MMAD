@@ -20,12 +20,15 @@ def process_sign(sign):
     return np.array([int(str) for str in sign.split(' ')])
 
 
-def check_sign(sign):
+def check_sign(sign, user_id):
     if not is_sign_valid(sign):
         return False
     signs = load_signs()
+    users = signs[:, -1]
+    if int(user_id) not in users:
+        return 'User not found'
     proceed_sign = process_sign(sign)
-    k = 1
+    k = 2
     object_class = k_nearest(signs, k, proceed_sign)
     # 1 - Auth success, 0 - Auth fail
     auth_state = {1: True, 0: False}

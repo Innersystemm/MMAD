@@ -5,6 +5,7 @@ Definition of views.
 from datetime import datetime
 
 from demoapp.knn import check_sign
+from demoapp.knn import load_signs
 from django.http import HttpRequest
 from django.shortcuts import render
 
@@ -26,11 +27,15 @@ def index(request):
 def auth(request):
     assert isinstance(request, HttpRequest)
     auth_form = AuthForm()
+
     if 'signs' in request.POST.keys():
-        if check_sign(request.POST['signs']):
-            status = 'Пользователь авторизован'
+        result = check_sign(request.POST['signs'], request.POST['user_id'])
+        if result is True:
+            status = 'Пользователь {} авторизован'.format(request.POST['user_id'])
+        elif result is False:
+            status = 'Пользователь {} не авторизован'.format(request.POST['user_id'])
         else:
-            status = 'Пользователь не авторизован'
+            status = 'Пользователь {} не найден'.format(request.POST['user_id'])
     else:
         status = 'Введите данные для авторизации'
 
@@ -42,3 +47,7 @@ def auth(request):
             'status': status,
         }
     )
+
+
+def get_signs(request):
+    return load_signs()

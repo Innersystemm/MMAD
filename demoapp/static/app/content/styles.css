@@ -97,7 +97,16 @@ label.auth-example
 
 label.auth-head
 {
-
 	font-size: 20px;
 }
 
+label.auth-field-tip
+{
+    position: relative;
+    margin-right: 5px;
+    font-style: italic;
+    font-size: 14px;
+    color: #888585;
+    vertical-align: middle;
+    line-height: 2;
+}

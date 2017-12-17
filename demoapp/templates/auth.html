@@ -6,13 +6,20 @@
         {% csrf_token %}
         <div>
             <div>
-                <div  class="auth-head">
-                    <label class="auth-head">Введите признаки через пробел:</label>
+                <div class="auth-head">
+                    <label class="auth-head">Признаки в векторе признаков отделяются пробелом</label>
                 </div>
-                <div  class="auth-head">
-                    {{ form.signs }}
-                </div> 
-                <div   class="auth-head">
+                <div>
+                    <div class="auth-head">
+                            <label class="auth-field-tip">ID Пользователя: </label>
+                            {{ form.user_id }}
+                    </div> 
+                     <div class="auth-head">
+                        <label class="auth-field-tip">Вектор признаков: </label>
+                        {{ form.signs }}
+                    </div> 
+                </div>
+                <div class="auth-head">
                     <label class="auth-example">Например: 90 56 45 14</label>
                 </div>
             </div>
