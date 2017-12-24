@@ -1,0 +1,30 @@
+﻿{% extends 'index.html' %}
+
+{% block content %}
+<div class="auth-head"><strong>Форма регистрации</strong></div>
+<div class="auth">
+    <form action="" method="post">
+        {% csrf_token %}
+        <div>
+            <div class="user-id-div">
+                <label class="auth-example">ID Пользователя:
+                    {{ form.userId }}
+                </label>
+            </div>
+            <div class="user-signs-div">
+                <label class="auth-example">Векторы признаков:</label>
+                <hr style="visibility: hidden;"/>
+                <label class="auth-example">Первый: {{ form.signVector1 }}</label>
+                <label class="auth-example">Второй: {{ form.signVector2 }}</label>
+                <label class="auth-example">Третий: {{ form.signVector3 }}</label>
+            </div>
+            <div class="user-submit-data-div">
+                <input class="submit-btn" type="submit" value="Зарегистрироваться">
+            </div>
+        </div>
+    </form>
+</div>
+ <div class="user-status-div">
+        <strong class="auth-status">{{status}}</strong>
+    </div>
+{% endblock %}

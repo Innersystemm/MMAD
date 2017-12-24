@@ -21,8 +21,6 @@ ul.hr > li > a
     text-decoration: none;
 }
 
-
-
 div.auth, div.auth-head
 {
     justify-content: center;
@@ -44,10 +42,11 @@ input.signs
     border-left: solid;
     border-left-width: 5px;
     border-color: rgb(24, 118, 172);
-    height: 20px;
+    min-height: 20px;
     font-size: 16px;
     background: #f3f3f3;
     padding: 5px;
+    margin-bottom: 5px;
 }
 
 input.signs:focus 
@@ -109,4 +108,27 @@ label.auth-field-tip
     color: #888585;
     vertical-align: middle;
     line-height: 2;
+}
+
+.user-id-div, .user-signs-div, .user-submit-data-div{
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    display: table-caption;
+    padding: 5px;
+    font-family: sans-serif;
+}
+
+.user-signs-div{
+}
+
+.user-submit-data-div{
+}
+
+.user-status-div{
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    left: 0;
+    display: flex;
 }
