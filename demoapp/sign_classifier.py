@@ -25,7 +25,7 @@ class Sign:
         proceed_sign = Sign.to_numeric_array(sign)
         object_class = Sign.k_nearest(db_data, k, proceed_sign)
         if object_class == int(user_id):
-            return True, 'Аторизация успеша. Распознан пользователь с ID: {0}'.format(object_class)
+            return True, 'Аторизация успешна. Распознан пользователь с ID: {0}'.format(object_class)
         else:
             return False, 'Неверный id пользователя/вектор признаков'
 

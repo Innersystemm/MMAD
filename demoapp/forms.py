@@ -8,7 +8,7 @@ class AuthForm(forms.Form):
 
 
 # Форма регистрации
-class SignInForm(forms.Form):
+class CreateAccountForm(forms.Form):
     userId = forms.CharField(max_length=100, widget=forms.NumberInput(attrs={'class': 'signs'}))
     # signs vectors
     signVector1 = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'signs'}))

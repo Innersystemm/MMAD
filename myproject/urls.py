@@ -20,6 +20,6 @@ from demoapp import views
 urlpatterns = [
     url(r'^$', views.index, name='index'),   
     url(r'^auth/', views.auth, name='auth'),
-    url(r'^signin/', views.sign_in, name='sign_in')
+    url(r'^createAccount/', views.create_account, name='create_account')
     #url(r'^admin/', admin.site.urls),
 ]

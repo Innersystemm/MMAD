@@ -45,8 +45,8 @@ def auth(request):
         })
 
 
-def sign_in(request):
-    sign_in_form = SignInForm()
+def create_account(request):
+    create_account_form = CreateAccountForm()
     msg = 'Введите параметры'
 
     if 'userId' in request.POST \
@@ -65,7 +65,7 @@ def sign_in(request):
         request,
         'create_account.html',
         {
-            'form': sign_in_form,
+            'form': create_account_form,
             'status': msg
         }
     )
