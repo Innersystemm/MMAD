@@ -47,7 +47,7 @@ def auth(request):
 
 def sign_in(request):
     sign_in_form = SignInForm()
-    status = 'Введите параметры'
+    msg = 'Введите параметры'
 
     if 'userId' in request.POST \
             and 'signVector1' in request.POST \
